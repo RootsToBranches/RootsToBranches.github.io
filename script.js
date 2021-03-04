@@ -54,7 +54,7 @@ if ( url.includes("posts/") ) {
 //Write the Header HTML, a series of list items containing links.
 let headerHTML = '<ul> <li><a href="' + relativePath + '/index.html">Home</a></li>' + 
 //'<li><a href="' + relativePath + '/archive.html">Archive</a></li>' +
-'<li><a href="' + relativePath + '/about.html">About</a></li>' +
+//'<li><a href="' + relativePath + '/about.html">About</a></li>' +
 '<li><a href="' + relativePath + '/disclaimer.html">Disclaimer</a></li>' +
 '<li><a href="' + relativePath + '/contact.html">Contact us</a> </ul>';
 
