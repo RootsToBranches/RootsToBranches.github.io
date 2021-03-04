@@ -14,8 +14,8 @@
 
 //==[ 1. BASIC INFO ]==
 
-let blogName = "My Blog Name";
-let authorName = "My Name Here";
+let blogName = "Roots to Branches";
+let authorName = "JM Pepe, Kevin Ko, Taylor Heidinger, and Matt Scot";
 let authorLink = ""; // Enter your website, social media, etc. Some way for people to tell you they like your blog! (Leaving it empty is okay too)
 
 //-----------------------------
@@ -53,11 +53,13 @@ if ( url.includes("posts/") ) {
 
 //Write the Header HTML, a series of list items containing links.
 let headerHTML = '<ul> <li><a href="' + relativePath + '/index.html">Home</a></li>' + 
-'<li><a href="' + relativePath + '/archive.html">Archive</a></li>' +
-'<li><a href="' + relativePath + '/about.html">About</a></li> </ul>';
+//'<li><a href="' + relativePath + '/archive.html">Archive</a></li>' +
+'<li><a href="' + relativePath + '/about.html">About</a></li>' +
+'<li><a href="' + relativePath + '/disclaimer.html">Disclaimer</a></li> </ul>';
 
 //Write the Footer HTML, which has information about the blog.
-let footerHTML = "<hr><p>" + blogName + " is written by <a href='" + authorLink + "'>" + authorName + "</a>, built with <a href='https://zonelets.net/'>Zonelets</a>, and hosted by <a href='https://neocities.org/'>Neocities!</a></p>";
+//let footerHTML = "<hr><p>" + blogName + " is written by <a href='" + authorLink + "'>" + authorName + "</a>, built with <a href='https://zonelets.net/'>Zonelets</a>, and hosted by <a href='https://neocities.org/'>Neocities!</a></p>";
+let footerHTML = "<hr><p>" + blogName + " is written by " + authorName + "; and built with <a href='https://zonelets.net/'>Zonelets</a>.</p>";
 
 //To do the following stuff, we want to know where we are in the posts array (if we're currently on a post page).
 let currentIndex = -1;
@@ -124,11 +126,11 @@ function formatPostLink(i) {
       postTitle_i = postsArray[i][0].slice(6,-5).replace(/-/g," ");
     }
   }
-  if (  postDateFormat.test ( postsArray[i][0].slice( 6,17 ) ) ) {
-    return '<li><a href="' + relativePath + '/'+ postsArray[i][0] +'">' + postsArray[i][0].slice(6,16) + " \u00BB " + postTitle_i + '</a></li>';
-  } else {
+  //if (  postDateFormat.test ( postsArray[i][0].slice( 6,17 ) ) ) {
+    //return '<li><a href="' + relativePath + '/'+ postsArray[i][0] +'">' + postsArray[i][0].slice(6,16) + " \u00BB " + postTitle_i + '</a></li>';
+  //} else {
     return '<li><a href="' + relativePath + '/'+ postsArray[i][0] +'">' + postTitle_i + '</a></li>';
-  }
+  //}
 }
 
 let postListHTML = "<ul>";
@@ -138,8 +140,8 @@ for ( let i = 0; i < postsArray.length; i++ ) {
 postListHTML += "</ul>";
 
 //Generate the Recent Post List HTML, which can be shown on the home page (or wherever you want!)
-let recentPostsCutoff = 3; //Hey YOU! Change this number to set how many recent posts to show before cutting it off with a "more posts" link.
-let recentPostListHTML = "<h2>Recent Posts:</h2><ul>";
+let recentPostsCutoff = 100; //Hey YOU! Change this number to set how many recent posts to show before cutting it off with a "more posts" link.
+let recentPostListHTML = "<h2>Posts:</h2><ul>";
 let numberOfRecentPosts = Math.min( recentPostsCutoff, postsArray.length );
 for ( let i = 0; i < numberOfRecentPosts; i++ ) {
   recentPostListHTML += formatPostLink(i);
@@ -202,9 +204,9 @@ if (document.getElementById("blogTitleH1")) {
 if (document.getElementById("postTitleH1")) {
   document.getElementById("postTitleH1").innerHTML = currentPostTitle;
 }
-if (document.getElementById("postDate")) {
+/*if (document.getElementById("postDate")) {
   document.getElementById("postDate").innerHTML = niceDate;
-}
+}*/
 if (document.getElementById("footer")) {
   document.getElementById("footer").innerHTML = footerHTML;
 }
