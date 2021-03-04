@@ -60,7 +60,7 @@ let headerHTML = '<ul> <li><a href="' + relativePath + '/index.html">Home</a></l
 
 //Write the Footer HTML, which has information about the blog.
 //let footerHTML = "<hr><p>" + blogName + " is written by <a href='" + authorLink + "'>" + authorName + "</a>, built with <a href='https://zonelets.net/'>Zonelets</a>, and hosted by <a href='https://neocities.org/'>Neocities!</a></p>";
-let footerHTML = "<hr><p>" + blogName + " is written by " + authorName + "; and built with <a href='https://zonelets.net/'>Zonelets</a>.</p>";
+let footerHTML = "<hr><p>" + blogName + " is written by " + authorName + "; and built with <a href='https://zonelets.net/'>Zonelets</a>.<br>Background by <a href='https://pixabay.com/users/yayangart-13477958/'>yayangart</a>.</p>";
 
 //To do the following stuff, we want to know where we are in the posts array (if we're currently on a post page).
 let currentIndex = -1;
