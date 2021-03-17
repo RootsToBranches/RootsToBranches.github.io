@@ -52,6 +52,16 @@ img {
   font-style: italic;
 }
 
+figure {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+figure img, figure figcaption {
+	display: flex;
+	align-self: center;
+
 a:link {
 	color: #32928d;
 }
