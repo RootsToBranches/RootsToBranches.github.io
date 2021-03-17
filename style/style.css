@@ -52,13 +52,21 @@ img {
   font-style: italic;
 }
 
+a:link {
+	color: #32928d;
+}
+
+a:visited {
+	color: #084b52;
+}
+
 a:hover { 
   background-color: #fff6e6;
 }
 
 h1, h2, h3, h4, h5 {
   font-family: Tahoma, Geneva, sans-serif;
-  color: #34436f;
+  color: #416153;
 }
 
 /*#CONTAINER is the rectangle that contains everything but the background!*/
@@ -66,7 +74,7 @@ h1, h2, h3, h4, h5 {
   margin: 3em auto;
   width: 90%;
 	max-width: 700px;
-	background-color: #f1e3c9;
+	background-color: #d7e3de;
   color: #151515; 
   outline-color: #a9a9a9;
   outline-style: ridge;
@@ -81,7 +89,7 @@ h1, h2, h3, h4, h5 {
 
 /*HEADER STYLE*/
 #header {
-  background-color: #384879;
+  background-color: #416153;
   padding: 0 5%;
   border-color: #a9a9a9;
   border-style: ridge;
