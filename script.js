@@ -55,7 +55,8 @@ if ( url.includes("posts/") ) {
 let headerHTML = '<ul> <li><a href="' + relativePath + '/index.html">Home</a></li>' + 
 //'<li><a href="' + relativePath + '/archive.html">Archive</a></li>' +
 //'<li><a href="' + relativePath + '/about.html">About</a></li>' +
-'<li><a href="' + relativePath + '/disclaimer.html">Disclaimer</a></li>' +
+'<li><a href="' + relativePath + '/disclaimer.html">Privacy</a></li>' +
+'<li><a href="' + relativePath + '/thanks.html">Acknowledgements</a></li>' +
 '<li><a href="' + relativePath + '/contact.html">Contact us</a> </ul>';
 
 //Write the Footer HTML, which has information about the blog.
